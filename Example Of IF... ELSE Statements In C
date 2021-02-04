@@ -1,0 +1,25 @@
+/*Create an algorithm that takes two numbers as input, 
+compares them and outputs whether the first number is larger,
+smaller or equal to the second number.*/
+
+#include <stdio.h>
+void main()
+{
+	int num1, num2;
+	printf("Enter two integers of your choice:\n");
+
+	scanf_s("%d %d", &num1, &num2);
+
+	if (num1 == num2)
+	{
+		printf("1st digit entered is equal to 2nd digit");
+	}
+	else if (num1 > num2)
+	{
+		printf("1st digit is greater than 2nd digit.");
+	}
+	else
+	{
+		printf("1st digit is less than 2nd digit");
+	}
+}
