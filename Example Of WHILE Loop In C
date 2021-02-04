@@ -1,0 +1,22 @@
+/*Create an algorithm that keeps asking
+for a negative numeric value and displays
+its square. It only terminates if the 
+input value is zero or a positive value.*/
+
+#include <stdio.h>
+
+void main()
+{
+	int x, square; 
+	printf("Enter any negative number: \n");
+	scanf_s("%d", &x);
+
+	while (x < 0)
+	{
+		square = x * x;
+		printf("\nSquare of %d is %d\n", x, square);
+		printf("\nEnter any negative number: \n");
+		scanf_s("%d", &x);
+	}
+	printf("Incorrect entry!");
+}
