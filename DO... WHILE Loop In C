@@ -1,0 +1,36 @@
+/*Design the logic for a program that outputs 
+every even number from 2 through n (n is specified by the user). 
+Write its code.*/
+
+#include <stdio.h>
+
+int main()
+{
+	printf("Enter a number greater than 2: \n");
+	int x = 2, y;
+	scanf_s("%d", &y);
+
+	if (y > x)
+	{
+		do
+		{
+			x = x + 2;
+			if (x <= y)
+			{
+				printf("%d\n", x);
+			}
+			else
+			{
+				printf("\nNo more even numbers between 2 and %d", x);
+			}
+		} while (y - x >= 2);
+		{
+			printf("No more even numbers betwwen 2 and %d", y);
+		}
+	}
+	else
+	{
+		printf("Incorrect value entered");
+	}
+	return 0;
+}
