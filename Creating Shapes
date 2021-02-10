@@ -1,0 +1,58 @@
+/*Take odd number as input from user. 
+If number is not an odd number keep asking the user to enter the correct number.
+Display a diamond accordingly. This is a sample of a diamond if user enters value 5.
+
+                            *
+		                     *  *  *
+                      *  *  *  *  *
+		                     *  *  *
+                            *
+*/
+
+#include <stdio.h>
+
+int main()
+{
+	printf("Enter rows: ");
+	int total_rows, row_no, space, sign = 0;
+	scanf_s("%d", &total_rows);
+	int p = total_rows;
+
+	if (total_rows % 2 != 0)
+	{
+		for (row_no = 0; row_no <= ((total_rows + 1) / 2); ++row_no)
+		{
+			for (space = 0; space <= (p - row_no); ++space)
+			{
+				printf(" ");
+			}
+			for (sign = 1; sign <= (2 * row_no) - 1; ++sign)
+			{
+				printf("* ");
+			}
+			--p;
+			printf("\n");
+		}
+
+		int y = row_no - 1;
+		int x = (total_rows + 1) / 2;
+
+		for (row_no = y; row_no > 1; row_no--)
+		{
+			for (space = 0; space <= ((x - row_no) * 2) + 1; ++space)
+			{
+				printf(" ");
+			}
+			for (sign = 2; sign < (2 * row_no) - 1; sign++)
+			{
+				printf("* ");
+			}
+			printf("\n");
+		}
+	}
+	else
+	{
+		printf("Incorrect input");
+	}
+	return 0;
+}
