@@ -1,0 +1,29 @@
+/*Write CODE to calculate first 20 Prime numbers.*/
+
+#include <stdio.h>
+
+int main()
+{
+    int total = 20;
+    int y = 3;
+    int count;
+    int x;
+
+    printf("First 20 prime numbers are: \n");
+    printf("2\n");
+
+    for (count = 1; count < total; y++)
+    {
+        for (x = 2; x < y; x++)
+        {
+            if (y % x == 0)
+                break;
+        }
+        if (x == y)
+        {
+            printf("%d\n", y);
+            count++;
+        }
+    }
+    return 0;
+}
